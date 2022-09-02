@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Sep  2 23:38:20 2022" VIVADOVERSION="2022.1">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="lighting_0" PORT="enable"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Dout" SIGIS="undef" SIGNAME="lighting_0_Dout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="lighting_0" PORT="Dout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Clock_divider_4hz" PORT="CLK_IN"/>
+        <CONNECTION INSTANCE="lighting_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/Clock_divider_4hz" HWVERSION="1.0" INSTANCE="Clock_divider_4hz" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Clock_divider" VLNV="xilinx.com:module_ref:Clock_divider:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIVISOR" VALUE="0x1DCD650"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_Clock_divider_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="CLK_IN" SIGIS="undef" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CLK_OUT" SIGIS="undef" SIGNAME="Clock_divider_4hz_CLK_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="lighting_0" PORT="clk1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/lighting_0" HWVERSION="1.0" INSTANCE="lighting_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="lighting" VLNV="xilinx.com:module_ref:lighting:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_lighting_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk1" SIGIS="undef" SIGNAME="Clock_divider_4hz_CLK_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Clock_divider_4hz" PORT="CLK_OUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Dout" SIGIS="undef" SIGNAME="lighting_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

@@ -1,0 +1,298 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Sep  2 23:38:23 2022
+# Process ID: 432097
+# Current directory: /home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.runs/synth_1/vivado.jou
+# Running On: machine, OS: Linux, CPU Frequency: 3293.814 MHz, CPU Physical cores: 8, Host memory: 8299 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Command: read_checkpoint -auto_incremental -incremental /home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.srcs/utils_1/imports/synth_1/lighting.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.srcs/utils_1/imports/synth_1/lighting.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 432188
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2661.980 ; gain = 0.000 ; free physical = 118 ; free virtual = 6647
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:22]
+INFO: [Synth 8-3491] module 'design_1' declared at '/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/synth/design_1.vhd:14' bound to instance 'design_1_i' of component 'design_1' [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:31]
+INFO: [Synth 8-638] synthesizing module 'design_1' [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/synth/design_1.vhd:26]
+INFO: [Synth 8-3491] module 'design_1_Clock_divider_0_0' declared at '/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/ip/design_1_Clock_divider_0_0/synth/design_1_Clock_divider_0_0.vhd:56' bound to instance 'Clock_divider_4hz' of component 'design_1_Clock_divider_0_0' [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/synth/design_1.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'design_1_Clock_divider_0_0' [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/ip/design_1_Clock_divider_0_0/synth/design_1_Clock_divider_0_0.vhd:63]
+	Parameter DIVISOR bound to: 31250000 - type: integer 
+INFO: [Synth 8-3491] module 'Clock_divider' declared at '/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.srcs/sources_1/new/clk_dvdr.v:1' bound to instance 'U0' of component 'Clock_divider' [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/ip/design_1_Clock_divider_0_0/synth/design_1_Clock_divider_0_0.vhd:84]
+INFO: [Synth 8-6157] synthesizing module 'Clock_divider' [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.srcs/sources_1/new/clk_dvdr.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Clock_divider' (0#1) [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.srcs/sources_1/new/clk_dvdr.v:1]
+INFO: [Synth 8-256] done synthesizing module 'design_1_Clock_divider_0_0' (0#1) [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/ip/design_1_Clock_divider_0_0/synth/design_1_Clock_divider_0_0.vhd:63]
+INFO: [Synth 8-3491] module 'design_1_lighting_0_0' declared at '/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/ip/design_1_lighting_0_0/synth/design_1_lighting_0_0.vhd:56' bound to instance 'lighting_0' of component 'design_1_lighting_0_0' [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/synth/design_1.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'design_1_lighting_0_0' [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/ip/design_1_lighting_0_0/synth/design_1_lighting_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'lighting' declared at '/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.srcs/sources_1/new/lighting.vhd:8' bound to instance 'U0' of component 'lighting' [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/ip/design_1_lighting_0_0/synth/design_1_lighting_0_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'lighting' [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.srcs/sources_1/new/lighting.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'lighting' (0#1) [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.srcs/sources_1/new/lighting.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'design_1_lighting_0_0' (0#1) [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/ip/design_1_lighting_0_0/synth/design_1_lighting_0_0.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/synth/design_1.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (0#1) [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2661.980 ; gain = 0.000 ; free physical = 1218 ; free virtual = 7749
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2661.980 ; gain = 0.000 ; free physical = 1217 ; free virtual = 7749
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2661.980 ; gain = 0.000 ; free physical = 1217 ; free virtual = 7749
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2661.980 ; gain = 0.000 ; free physical = 1204 ; free virtual = 7739
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.srcs/constrs_1/constraints.xdc]
+Finished Parsing XDC File [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.srcs/constrs_1/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.srcs/constrs_1/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2685.988 ; gain = 0.000 ; free physical = 1089 ; free virtual = 7652
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2685.988 ; gain = 0.000 ; free physical = 1089 ; free virtual = 7653
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 1153 ; free virtual = 7720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 1153 ; free virtual = 7720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/Clock_divider_4hz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/lighting_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 1153 ; free virtual = 7720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 1142 ; free virtual = 7712
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 5     
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               24 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---RAMs : 
+	               1K Bit	(48 X 24 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   2 Input   24 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 1120 ; free virtual = 7701
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++----------------------+-------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name           | RTL Object  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------+-------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|design_1_i/lighting_0 | U0/vram_reg | 48 x 24(READ_FIRST)    | W |   | 48 x 24(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++----------------------+-------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 992 ; free virtual = 7581
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 985 ; free virtual = 7575
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++----------------------+-------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name           | RTL Object  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------+-------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|design_1_i/lighting_0 | U0/vram_reg | 48 x 24(READ_FIRST)    | W |   | 48 x 24(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++----------------------+-------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance design_1_i/lighting_0/U0/vram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 985 ; free virtual = 7574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 985 ; free virtual = 7575
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 985 ; free virtual = 7575
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 985 ; free virtual = 7575
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 985 ; free virtual = 7575
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 985 ; free virtual = 7575
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 985 ; free virtual = 7575
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    65|
+|3     |LUT1     |     2|
+|4     |LUT2     |   136|
+|5     |LUT3     |    11|
+|6     |LUT4     |    25|
+|7     |LUT5     |    16|
+|8     |LUT6     |    38|
+|9     |MUXF7    |     3|
+|10    |RAMB18E1 |     1|
+|11    |FDRE     |   191|
+|12    |IBUF     |     2|
+|13    |OBUF     |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 985 ; free virtual = 7575
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2685.988 ; gain = 0.000 ; free physical = 1037 ; free virtual = 7627
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 1036 ; free virtual = 7627
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2685.988 ; gain = 0.000 ; free physical = 1025 ; free virtual = 7622
+INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2685.988 ; gain = 0.000 ; free physical = 1061 ; free virtual = 7660
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: f1a33238
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 2685.988 ; gain = 24.008 ; free physical = 1274 ; free virtual = 7874
+INFO: [Common 17-1381] The checkpoint '/home/rootuser/Desktop/Vivado/npxl_anfr/npxl_anfr.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  2 23:38:52 2022...

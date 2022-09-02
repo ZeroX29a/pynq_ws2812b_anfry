@@ -1,0 +1,154 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xA779A8969FFB0977",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../npxl_anfr.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "None",
+      "tool_version": "2022.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Clock_divider_4hz": "",
+      "lighting_0": ""
+    },
+    "ports": {
+      "enable": {
+        "direction": "I"
+      },
+      "Dout": {
+        "direction": "O"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "Clock_divider_4hz": {
+        "vlnv": "xilinx.com:module_ref:Clock_divider:1.0",
+        "xci_name": "design_1_Clock_divider_0_0",
+        "xci_path": "ip/design_1_Clock_divider_0_0/design_1_Clock_divider_0_0.xci",
+        "inst_hier_path": "Clock_divider_4hz",
+        "parameters": {
+          "DIVISOR": {
+            "value": "0x1DCD650"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Clock_divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK_IN": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "CLK_OUT": {
+            "direction": "O"
+          }
+        }
+      },
+      "lighting_0": {
+        "vlnv": "xilinx.com:module_ref:lighting:1.0",
+        "xci_name": "design_1_lighting_0_0",
+        "xci_path": "ip/design_1_lighting_0_0/design_1_lighting_0_0.xci",
+        "inst_hier_path": "lighting_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "lighting",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk1": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "125000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "Dout": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Clock_divider_0_CLK_OUT": {
+        "ports": [
+          "Clock_divider_4hz/CLK_OUT",
+          "lighting_0/clk1"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "Clock_divider_4hz/CLK_IN",
+          "lighting_0/clk"
+        ]
+      },
+      "enable": {
+        "ports": [
+          "enable",
+          "lighting_0/enable"
+        ]
+      },
+      "lighting_0_Dout": {
+        "ports": [
+          "lighting_0/Dout",
+          "Dout"
+        ]
+      }
+    }
+  }
+}
