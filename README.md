@@ -9,4 +9,8 @@ Here I used seperate clock divider module to drive a counter process because it 
 * enable -> SW0
 * clk  -> H16 Pin from Eth PHY
 
+Demo is given Below.
+
+![demo](display.gif)
+
 Source is a writeup by [anfractuosity](https://www.anfractuosity.com/projects/lightdriver/)
