@@ -7,7 +7,7 @@ Here I used seperate clock divider module to drive a counter process because it 
 ## Pin Layout
 * Dout -> AR[0]
 * enable -> SW0
-* clk  -> H16 Pin from Eth PHY
+* clk  -> H16 Pin from Eth PHY(125Mhz)
 
 Demo is given Below.
 
